@@ -22,7 +22,8 @@
     "prettier": "prettier --write \"**/*.{js,json,md,yml}\"",
     "lerna-publish": "lerna publish",
     "test": "yarn build && yarn lint && yarn coverage",
-    "unit": "jest"
+    "unit": "jest",
+    "chromatic": "npx chromatic --project-token=chpt_38fa7e5328ae2b4"
   },
   "husky": {
     "hooks": {
@@ -78,5 +79,8 @@
     "stylelint-config-styled-components": "0.1.1",
     "stylelint-processor-styled-components": "1.10.0",
     "webpack": "4.44.1"
-  }
+  },
+  "version": "",
+  "readme": "ERROR: No README data found!",
+  "_id": "root@"
 }
