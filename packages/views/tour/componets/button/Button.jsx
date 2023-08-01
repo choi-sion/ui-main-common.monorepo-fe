@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '/packages/tour/componets/button/button.scss';
+import '/packages/styles/tour/componets/button/button.scss';
 
 
 /**
