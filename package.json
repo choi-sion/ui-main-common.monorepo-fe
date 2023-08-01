@@ -14,6 +14,7 @@
     "coverage": "jest --coverage",
     "deploy-storybook": "storybook-to-ghpages",
     "dev": "storybook dev -p 6006",
+    "build-storybook": "storybook build --quiet",
     "lint:js": "eslint . --ext .js --ignore-pattern lib --ignore-pattern node_modules",
     "lint:styles": "stylelint './packages/**/*.js'",
     "lint": "yarn lint:js && yarn lint:styles",
