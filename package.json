@@ -1,4 +1,7 @@
 {
+  "version": "",
+  "readme": "ERROR: No README data found!",
+  "_id": "root@",
   "name": "root",
   "private": true,
   "workspaces": [
@@ -31,9 +34,12 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,md,yml}": [
-      "prettier --write",
-      "git add"
+    "**/*.{js,ts,tsx}": [
+      "eslint",
+      "prettier --check"
+    ],
+    "**/*.{json,yaml,md}": [
+      "prettier --check"
     ]
   },
   "devDependencies": {
@@ -79,8 +85,5 @@
     "stylelint-config-styled-components": "0.1.1",
     "stylelint-processor-styled-components": "1.10.0",
     "webpack": "4.44.1"
-  },
-  "version": "",
-  "readme": "ERROR: No README data found!",
-  "_id": "root@"
+  }
 }
