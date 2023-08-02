@@ -1,0 +1,43 @@
+$imgPath: "/src/stories/data/images";
+
+.headerWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 10;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+
+  .headerInner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    width: 100%;
+    height: 4.4rem;
+    background: $white;
+
+    .backBtn {
+      position: relative;
+      width: 2.9rem;
+      height: 3rem;
+      margin-right: .9rem;
+      background: url("#{$imgPath}/common/icon-back.svg") no-repeat center;
+    }
+  }
+
+  .channelInfoWrapper {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 0.6rem;
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+}

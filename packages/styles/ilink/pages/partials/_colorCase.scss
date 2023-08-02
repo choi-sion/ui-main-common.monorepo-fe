@@ -1,0 +1,119 @@
+&.ticket {
+  .noticeWrapper {
+    svg path {
+      fill: $ticketPurple;
+    }
+
+    h3 {
+      color: $ticketPurple;
+    }
+  }
+
+  .stream .buttonWrap.first {
+    button {
+      color: $ticketPurple;
+    }
+  }
+}
+
+&.overseaAir {
+  .noticeWrapper {
+    svg path {
+      fill: #55ADFF;
+    }
+
+    h3 {
+      color: #55ADFF;
+    }
+  }
+}
+
+&.domesticAir {
+  .noticeWrapper {
+    svg path {
+      fill: #4DBEEE;
+    }
+
+    h3 {
+      color: #4DBEEE;
+    }
+  }
+}
+
+&.overseaHotel {
+  .noticeWrapper {
+    svg path {
+      fill: #67CA94;
+    }
+
+    h3 {
+      color: #67CA94;
+    }
+  }
+}
+
+&.domesticHotel {
+  .noticeWrapper {
+    svg path {
+      fill: #48D1B0;
+    }
+
+    h3 {
+      color: #48D1B0;
+    }
+  }
+}
+
+&.overseaPackage {
+  .noticeWrapper {
+    svg path {
+      fill: #FB7B5F;
+    }
+
+    h3 {
+      color: #FB7B5F;
+    }
+  }
+}
+
+&.domesticPackage {
+  .noticeWrapper {
+    svg path {
+      fill: #FB975F;
+    }
+
+    h3 {
+      color: #FB975F;
+    }
+  }
+}
+
+&.tourTicket {
+  .noticeWrapper {
+    svg path {
+      fill: #F9C474;
+    }
+
+    h3 {
+      color: #F9C474;
+    }
+  }
+}
+
+&.seoulArts {
+  .noticeWrapper {
+    svg path {
+      fill: #E6002D;
+    }
+
+    h3 {
+      color: #E6002D;
+    }
+  }
+
+  .stream .buttonWrap.first {
+    button {
+      color: #E6002D;
+    }
+  }
+}

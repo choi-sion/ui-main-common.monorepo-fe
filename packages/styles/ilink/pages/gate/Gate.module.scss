@@ -1,0 +1,240 @@
+@import "../../base/_reset";
+@import "../../base/_variables";
+@import "../../common/_layerAlert";
+@import "../../common/_headerWrapper";
+
+$imgPath: "/src/stories/data/images";
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+
+  * {
+    font-family: $font-pretendard;
+  }
+
+  .headerWrapper {
+    .channelInfoWrapper {
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+.talkContainer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+
+  .division {
+    height: .8rem;
+    background-color: #f0f4f4;
+  }
+}
+
+.talkListWrap {
+  position: relative;
+  padding: 2rem;
+
+  .talkListWrap:not(:first-child) {
+    margin-top: 2.4rem;
+  }
+
+  h2 {
+    padding: .3rem 0;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #666;
+
+    .num {
+      font-size: 1.2rem;
+      padding-left: 0.4rem;
+    }
+  }
+
+  .listModifyBtn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    padding: 0 .8rem;
+    border: 1px solid #ddd;
+    border-radius: .4rem;
+    line-height: 2.4rem;
+    font-weight: bold;
+    color: #666;
+  }
+
+  .empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 37rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+}
+
+.navList {
+  display: flex;
+  overflow: auto;
+  margin: 0 -2rem;
+  padding: 0 2rem;
+  white-space: nowrap;
+
+  .navItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2rem;
+    width: 4.8rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #111111;
+  }
+
+  .navItem.tour {
+    font-size: 1.2rem;
+  }
+
+  .iconImg {
+    display: block;
+    width: 4.8rem;
+    height: 4.8rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
+.navList::-webkit-scrollbar{
+  display: none;
+}
+
+.talkList {
+  &.modifying {
+    .datetime {
+      .num {
+        display: none;
+      }
+    }
+
+    .deleteWrap {
+      display: flex;
+    }
+  }
+
+  .listItem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 5.1rem;
+    margin: 0 -.4rem;
+    padding: 1.6rem .8rem 1.6rem .4rem;
+    color: #111;
+
+    &:not(:first-child) {
+      border-top: 1px solid #eee;
+    }
+
+    img {
+      width: 4.8rem;
+      height: 4.8rem;
+    }
+  }
+
+  .listRight {
+    display: flex;
+    flex: 1;
+    margin-left: 1rem;
+  }
+
+  .message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin-right: 1rem;
+    line-height: 1.3;
+    box-sizing: border-box;
+
+    .name {
+      color: #111;
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    .chat {
+      @include line-clamp(2);
+      padding-top: 0.2rem;
+      color: #666;
+      font-size: 1.2rem;
+      line-height: 1.3;
+      -webkit-transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .datetime {
+    flex-shrink: 0;
+    align-self: flex-start;
+    width: 6rem;
+    margin-left: auto;
+    text-align: right;
+
+    time {
+      display: block;
+      color: #999999;
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    .num {
+      display: inline-block;
+      min-width: 1.8rem;
+      padding: 0 0.5rem;
+      height: 1.8rem;
+      margin-top: .6rem;
+      background: $subRed;
+      box-sizing: border-box;
+      border-radius: 1rem;
+      color: #fff;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      text-align: center;
+    }
+  }
+
+  .deleteWrap {
+    display: none;
+    margin-left: 2.2rem;
+    align-items: center;
+    
+    button {
+      width: 3rem;
+      height: 3rem;
+      background: url("#{$imgPath}/chat/icon-delete-circle.svg") no-repeat center / 2.4rem auto;
+    }
+  }
+}
+
+.errorWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4.8rem;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  h2 {
+    margin-top: 2.5rem;
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  p {
+    margin-top: 0.75rem;
+    color: #666666;
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+}
