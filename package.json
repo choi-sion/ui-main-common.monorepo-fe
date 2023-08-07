@@ -1,6 +1,5 @@
 {
-  "version": "",
-  "readme": "ERROR: No README data found!",
+  "version": "0.0.0",
   "_id": "root@",
   "name": "root",
   "private": true,
@@ -8,8 +7,8 @@
     "packages/*"
   ],
   "engines": {
-    "node": ">=10.15.0",
-    "yarn": ">=1.5.1 <=1.22.19"
+    "node": ">=16.18.1",
+    "yarn": ">=1.22.19"
   },
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
@@ -26,7 +25,9 @@
     "unit": "jest",
     "dev": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_38fa7e5328ae2b4"
+    "chromatic": "chromatic --project-token CHROMATIC_PROJECT_TOKEN"
+  }
+}
   },
   "husky": {
     "hooks": {
