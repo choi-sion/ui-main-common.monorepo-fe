@@ -96,7 +96,7 @@ export const tourReserveArray = [
     headline: '예약완료',
     description: '예약번호 T1234567890',
     title: '[아주 NICE한 서유럽 4국 12일] 남프랑스+융프라우+베르사유+몽쉘미셸+스위스+영국',
-    image: '/src/stories/mockData/images/tour-product.jpeg',
+    image: '/packages/data/images/ilink/tour-product.jpeg',
     items: [
       {
         title: '2022.12.28(금) ~ 12.30(토)',
@@ -129,7 +129,7 @@ export const tourReserveArray = [
     headline: '예약완료',
     description: '예약번호 T1234567890',
     title: '더 뉴모닝(2021)',
-    image: '/src/stories/mockData/images/tour-product.jpeg',
+    image: '/packages/data/images/ilink/tour-product.jpeg',
     items: [
       {
         title: '2022.9.8(목)',

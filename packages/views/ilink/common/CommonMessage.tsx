@@ -3,7 +3,7 @@ import {
   receiveSingleArray,
   sendSingleArray,
   sendMultipleArray,
-} from '/packages/mockData/ilink/text/CaseArray';
+} from '/packages/data/texts/ilink/CaseArray';
 import CommonSent from './CommonSent';
 import CommonReceive from './CommonReceive';
 import styles from '/packages/styles/ilink/pages/chat/Chat.module.scss';

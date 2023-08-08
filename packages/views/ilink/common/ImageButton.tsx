@@ -4,7 +4,7 @@ const CaseImageButton = () => {
   return (
     <div className={styles.messageInner}>
       <div className={styles.imageWrap}>
-        <img src="/src/stories/mockData/images/ticket-product.gif" alt="" />
+        <img src="/packages/data/images/ilink/ticket-product.gif" alt="" />
       </div>
       <div className={styles.buttonWrap}>
         <button>쿠폰받기</button>
