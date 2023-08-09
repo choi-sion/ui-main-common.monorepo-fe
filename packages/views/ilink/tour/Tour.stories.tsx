@@ -1,13 +1,15 @@
 
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryObj } from '@storybook/react';
 
 import TourExample from './Tour';
 
 export default {
-  title: 'iLink/chat/Tour',
+  title: 'iLink/Pages/투어',
   component: TourExample,
-} as ComponentMeta<typeof TourExample>;
+} as StoryObj<typeof TourExample>;
 
-const Template: ComponentStory<typeof TourExample> = () => <TourExample />;
+// const Template: StoryObj<typeof TourExample> = () => <TourExample />;
 
-export const Default = Template.bind({});
+export const Default: StoryObj<typeof TourExample> = {
+  name: "체팅화면"
+}

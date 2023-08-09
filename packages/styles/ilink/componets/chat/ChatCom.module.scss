@@ -11,74 +11,74 @@
     background-color: #f2f2f2;
     line-height: 1.5;
     color: #000;
+}
 
-    .textWrap {
-        font-size: 1.5rem;
-        line-height: 1.5;
-        word-wrap: break-word;
+.textWrap {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    word-wrap: break-word;
 
-        + .textWrap {
-            margin-top: 0.8rem;
-        }
-
-        + .buttonWrap {
-            margin-top: 0.8rem;
-        }
+    + .textWrap {
+        margin-top: 0.8rem;
     }
 
-    .buttonWrap {
-        + .buttonWrap {
-            margin-top: 0.4rem;
-        }
+    + .buttonWrap {
+        margin-top: 0.8rem;
+    }
+}
 
-        &.first {
-            button {
-                color: #1769ff;
-            }
-        }
+.buttonWrap {
+    + .buttonWrap {
+        margin-top: 0.4rem;
+    }
 
+    &.first {
         button {
-            @include btnCommon;
-            display: inline-block;
-            min-width: 20.8rem;
-
-            .btnSize {
-                font-size: 18px;
-
-                &-small {
-                    font-size: 12px;
-                    padding: 10px 16px;
-                }
-
-                &-medium {
-                    font-size: 14px;
-                    padding: 11px 20px;
-                }
-
-                &-large {
-                    font-size: 16px;
-                    padding: 12px 24px;
-                }
-            }
+            color: #1769ff;
         }
     }
 
-    .imageWrap {
-        border-radius: 0.8rem;
-        overflow: hidden;
+    button {
+        @include btnCommon;
+        display: inline-block;
+        min-width: 20.8rem;
 
-        + .buttonWrap {
-            margin-top: 1.2rem;
-        }
+        .btnSize {
+            font-size: 18px;
 
-        + .textWrap {
-            margin-top: 0.8rem;
-        }
+            &.small {
+                font-size: 12px;
+                padding: 10px 16px;
+            }
 
-        img {
-            display: block;
-            width: 100%;
+            &.medium {
+                font-size: 14px;
+                padding: 11px 20px;
+            }
+
+            &.large {
+                font-size: 16px;
+                padding: 12px 24px;
+            }
         }
+    }
+}
+
+.imageWrap {
+    border-radius: 0.8rem;
+    overflow: hidden;
+
+    + .buttonWrap {
+        margin-top: 1.2rem;
+    }
+
+    + .textWrap {
+        margin-top: 0.8rem;
+    }
+
+    img {
+        display: block;
+        width: 100%;
     }
 }
 

@@ -1,4 +1,7 @@
-import styles from '/packages/styles/ilink/pages/chat/Chat.module.scss';
+
+import PropTypes from 'prop-types';
+import ComponetsButton from '../componets/Button';
+import styles from '/packages/styles/ilink/componets/chat/ChatCom.module.scss';
 
 const CaseTourCategory = () => {
   const buttonArray = [
@@ -14,18 +17,10 @@ const CaseTourCategory = () => {
     '취소규정',
     '기타',
   ];
-
   return (
     <div className={styles.messageInner}>
-      <div className={styles.textWrap}>
-        어떤 내용이 궁금하신가요?
-        <br />
-        궁금한 내용을 선택해주세요.
-      </div>
-      {buttonArray.map((item) => (
-        <div className={styles.buttonWrap} key={item}>
-          <button>{item}</button>
-        </div>
+      {buttonArray.map((item, index) => (
+        <ComponetsButton label={item} key={index}/>
       ))}
     </div>
   );
