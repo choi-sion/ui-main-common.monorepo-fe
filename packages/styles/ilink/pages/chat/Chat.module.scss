@@ -5,480 +5,480 @@
 $imgPath: "/packages/data/images";
 
 .chatContainer {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  min-width: 32rem;
-  height: var(--visualViewportHeight, 100%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-width: 32rem;
+    height: var(--visualViewportHeight, 100%);
 
-  * {
-    font-family: $font-pretendard;
-  }
+    * {
+        font-family: $font-pretendard;
+    }
 
-  @import "../partials/_colorCase";
+    @import "../partials/_colorCase";
 
-  .headerWrapper {
-    border-bottom: 1px solid #f3f3f3;
-  }
+    .headerWrapper {
+        border-bottom: 1px solid #f3f3f3;
+    }
 }
 
 .noticeWrapper {
-  z-index: 99;
-  position: fixed;
-  top: 5.2rem;
-  right: .8rem;
-  width: 3.6rem;
-  height: 3.6rem;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 .1rem .8rem rgba(0, 0, 0, .2);
-  box-sizing: border-box;
-  word-break: break-word;
+    z-index: 99;
+    position: fixed;
+    top: 5.2rem;
+    right: .8rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 .1rem .8rem rgba(0, 0, 0, .2);
+    box-sizing: border-box;
+    word-break: break-word;
 
-  &.active {
-    left: .8rem;
-    width: auto;
-    height: auto;
-    border-radius: .8rem;
-    padding: 1.2rem 3.4rem 1.2rem 1.6rem;
+    &.active {
+        left: .8rem;
+        width: auto;
+        height: auto;
+        border-radius: .8rem;
+        padding: 1.2rem 3.4rem 1.2rem 1.6rem;
+
+        .toggleButton {
+            top: .3rem;
+            left: auto;
+            right: .3rem;
+        }
+
+        .noticeInner {
+            display: block;
+        }
+    }
 
     .toggleButton {
-      top: .3rem;
-      left: auto;
-      right: .3rem;
+        position: absolute;
+        top: .2rem;
+        right: 0;
+        width: 3.6rem;
+        height: 3.6rem;
+
+        &[aria-expanded="false"] {
+            svg {
+                path:nth-child(1),
+                path:nth-child(3),
+                path:nth-child(5) {
+                    fill: #fff !important;
+                }
+            }
+        }
     }
 
     .noticeInner {
-      display: block;
+        display: none;
+        max-height: 27rem;
+        overflow-y: auto;
     }
-  }
 
-  .toggleButton {
-    position: absolute;
-    top: .2rem;
-    right: 0;
-    width: 3.6rem;
-    height: 3.6rem;
-
-    &[aria-expanded="false"] {
-      svg {
-        path:nth-child(1),
-        path:nth-child(3),
-        path:nth-child(5) {
-          fill: #fff !important;
+    .noticeEach {
+        +.noticeEach {
+            margin-top: 1.2rem;
         }
-      }
     }
-  }
 
-  .noticeInner {
-    display: none;
-    max-height: 27rem;
-    overflow-y: auto;
-  }
-
-  .noticeEach {
-    + .noticeEach {
-      margin-top: 1.2rem;
+    h3 {
+        font-size: 1.3rem;
+        line-height: 1.5;
+        margin-bottom: .4rem;
     }
-  }
 
-  h3 {
-    font-size: 1.3rem;
-    line-height: 1.5;
-    margin-bottom: .4rem;
-  }
-
-  p {
-    padding-right: 1rem;
-    white-space: pre-wrap;
-    font-size: 1.3rem;
-    line-height: 1.5;
-    color: #666;
-  }
+    p {
+        padding-right: 1rem;
+        white-space: pre-wrap;
+        font-size: 1.3rem;
+        line-height: 1.5;
+        color: #666;
+    }
 }
 
 .streams {
-  flex: 1;
-  overflow-x: hidden;
-  overflow-y: auto;
-  position: relative;
-  padding-bottom: 2rem;
-  font-size: 1.6rem;
-  background-color: #fff;
-  -webkit-overflow-scrolling: touch;
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    padding-bottom: 2rem;
+    font-size: 1.6rem;
+    background-color: #fff;
+    -webkit-overflow-scrolling: touch;
 
-  .splitter {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-    padding-top: 2rem;
-    text-align: center;
+    .splitter {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+        padding-top: 2rem;
+        text-align: center;
 
-    h3 {
-      padding: 0 1rem;
-      white-space: nowrap;
-      font-size: 1.2rem;
-      line-height: 1.5;
-      font-weight: normal;
-      text-align: center;
-      color: #666666;
+        h3 {
+            padding: 0 1rem;
+            white-space: nowrap;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            font-weight: normal;
+            text-align: center;
+            color: #666;
 
-      time {
-        display: block;
-        padding: 0.5rem 1rem;
-        width: fit-content;
-        border: 1px solid #DDDDDD;
-        border-radius: 3rem;
-        font-size: 1.2rem;
-        line-height: 1.5;
-      }
+            time {
+                display: block;
+                padding: .5rem 1rem;
+                width: fit-content;
+                border: 1px solid #ddd;
+                border-radius: 3rem;
+                font-size: 1.2rem;
+                line-height: 1.5;
+            }
+        }
     }
-  }
 }
 
 .streamWrapper {
-  margin-top: 2rem;
+    margin-top: 2rem;
 
-  &.different {
-    .messageInner {
-      border-radius: 0 1.2rem 1.2rem 1.2rem;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -.8rem;
-        width: 0;
-        height: 0;
-        border-top: .6rem solid #f2f2f2;
-        border-left: 1.1rem solid transparent;
-      }
-
-      &.template {
-        border-radius: 1.2rem;
-
-        &::before {
-          content: none;
-        }
-      }
-    }
-  }
-
-  &.same {
-    margin-top: .8rem;
-
-    .stream {
-      padding-left: 6.1rem;
-    }
-
-    .photo {
-      display: none;
-    }
-  }
-
-  &.receive {
-    .dateWrapper {
-      margin-right: .4rem;
-      margin-left: .6rem;
-    }
-  }
-
-  &.sent {
     &.different {
-      .messageInner {
-        border-radius: 1.2rem 0 1.2rem 1.2rem;
-      }
-    }
+        .messageInner {
+            border-radius: 0 1.2rem 1.2rem 1.2rem;
 
-    .stream {
-      flex-direction: row-reverse;
-    }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -.8rem;
+                width: 0;
+                height: 0;
+                border-top: .6rem solid #f2f2f2;
+                border-left: 1.1rem solid transparent;
+            }
 
-    .photo {
-      display: none;
-    }
+            &.template {
+                border-radius: 1.2rem;
 
-    .messageInner {
-      margin-right: .8rem;
-      background-color: #000;
-      border-radius: 1.2rem;
-      color: #fff;
-
-      &::before {
-        right: -.8rem;
-        left: auto;
-        border-top-color: #000;
-        border-right: 1rem solid transparent;
-        border-left: none;
-      }
-
-      &.template {
-        background-color: #fff;
-        border-radius: 1.2rem;
-        border: 1px solid #ddd;
-        color: #000;
-
-        &::before {
-          content: none;
+                &::before {
+                    content: none;
+                }
+            }
         }
-      }
     }
 
-    .ticketReserve {
-      .infoText {
-        p + p {
-          margin-top: 0;
+    &.same {
+        margin-top: .8rem;
+
+        .stream {
+            padding-left: 6.1rem;
         }
 
-        h4 {
-          margin: 0;
+        .photo {
+            display: none;
         }
-
-        .headline {
-          margin-top: .4rem;
-        }
-      }
     }
 
-    .dateWrapper {
-      margin-left: auto;
-      margin-right: .6rem;
+    &.receive {
+        .dateWrapper {
+            margin-right: .4rem;
+            margin-left: .6rem;
+        }
     }
-  }
 
-  + .splitter {
-    padding-top: 4rem;
-  }
+    &.sent {
+        &.different {
+            .messageInner {
+                border-radius: 1.2rem 0 1.2rem 1.2rem;
+            }
+        }
+
+        .stream {
+            flex-direction: row-reverse;
+        }
+
+        .photo {
+            display: none;
+        }
+
+        .messageInner {
+            margin-right: .8rem;
+            background-color: #000;
+            border-radius: 1.2rem;
+            color: #fff;
+
+            &::before {
+                right: -.8rem;
+                left: auto;
+                border-top-color: #000;
+                border-right: 1rem solid transparent;
+                border-left: none;
+            }
+
+            &.template {
+                background-color: #fff;
+                border-radius: 1.2rem;
+                border: 1px solid #ddd;
+                color: #000;
+
+                &::before {
+                    content: none;
+                }
+            }
+        }
+
+        .ticketReserve {
+            .infoText {
+                p + p {
+                    margin-top: 0;
+                }
+
+                h4 {
+                    margin: 0;
+                }
+
+                .headline {
+                    margin-top: .4rem;
+                }
+            }
+        }
+
+        .dateWrapper {
+            margin-left: auto;
+            margin-right: .6rem;
+        }
+    }
+
+    +.splitter {
+        padding-top: 4rem;
+    }
 }
 
 .stream {
-  display: flex;
-  position: relative;
-  padding: 0 1.3rem 0 1.6rem;
-  transform: translate3d(0, 0, 0);
-  overflow-x: auto;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  .photo {
-    display: block;
+    display: flex;
     position: relative;
-    flex-shrink: 0;
-    width: 3.5rem;
-    height: 3.5rem;
-    margin-right: 1.1rem;
-    border-radius: 1.2rem;
-    background-color: #fff;
-    overflow: hidden;
+    padding: 0 1.3rem 0 1.6rem;
+    transform: translate3d(0, 0, 0);
+    overflow-x: auto;
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      border-radius: 1.2rem;
+    &::-webkit-scrollbar {
+        display: none;
     }
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: fill;
+    .photo {
+        display: block;
+        position: relative;
+        flex-shrink: 0;
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-right: 1.1rem;
+        border-radius: 1.2rem;
+        background-color: #fff;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid rgba(0, 0, 0, .05);
+            border-radius: 1.2rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
     }
-  }
 
-  .swiperTemplate {
-    width: 100vw;
-    margin: 0 -1.3rem 0 -6.1rem;
-    padding: 0 2rem 0 6.1rem;
+    .swiperTemplate {
+        width: 100vw;
+        margin: 0 -1.3rem 0 -6.1rem;
+        padding: 0 2rem 0 6.1rem;
 
-    .slideWrap {
-      width: 27rem;
+        .slideWrap {
+            width: 27rem;
+        }
+
+        .messageInner {
+            max-width: none;
+        }
     }
 
-    .messageInner {
-      max-width: none;
+    @import "../partials/_messageInner";
+
+    .dateWrapper {
+        margin-top: auto;
+        margin-bottom: .6rem;
+        white-space: nowrap;
+        color: #999;
+        font-size: 1.1rem;
+        box-sizing: border-box;
     }
-  }
-
-  @import "../partials/_messageInner";
-
-  .dateWrapper {
-    margin-top: auto;
-    margin-bottom: .6rem;
-    white-space: nowrap;
-    color: #999;
-    font-size: 1.1rem;
-    box-sizing: border-box;
-  }
 }
 
 .toastWrapper {
-  position: fixed;
-  bottom: 7.6rem;
-  left: .8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.8rem 0;
-  width: calc(100% - 1.6rem);
-  background: #000000;
-  opacity: 0.7;
-  border-radius: 0.8rem;
-  font-size: 1.3rem;
-  line-height: 1.9rem;
-  color: #FFFFFF;
-  z-index: 1;
+    position: fixed;
+    bottom: 7.6rem;
+    left: .8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem 0;
+    width: calc(100% - 1.6rem);
+    background: #000;
+    opacity: .7;
+    border-radius: .8rem;
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+    color: #fff;
+    z-index: 1;
 }
 
 .controller {
-  position: relative;
-
-  .inputs {
-    display: flex;
-    align-items: flex-end;
     position: relative;
-    z-index: 1;
-    padding: 1.2rem 1.6rem;;
-    border-top: 1px solid #eee;
-    box-sizing: border-box;
 
-    .buttonCol {
-      display: flex;
-      align-items: center;
-
-      .camera {
-        position: relative;
-        display: block;
-        width: 2.8rem;
-        height: 2.5rem;
-        margin-right: 1.6rem;
-        margin-bottom: .75rem;
-
-        input {
-          position: absolute;
-          width: 0;
-          height: 0;
-          overflow: hidden;
-        }
-
-        span {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: url(/images/pages/chat/icon_camera.svg) no-repeat center / 100% auto;
-          font-size: 0;
-        }
-      }
-    }
-
-    .textCol {
-      flex: auto;
-
-      .chatInput {
+    .inputs {
         display: flex;
-        position: relative;
-        padding: .5rem;
         align-items: flex-end;
-        overflow-y: auto;
-        background: #f8f8f8;
-        border: 1px solid #eee;
-        border-radius: 1rem;
+        position: relative;
+        z-index: 1;
+        padding: 1.2rem 1.6rem;
+        border-top: 1px solid #eee;
         box-sizing: border-box;
 
-        .textInputWrap {
-          padding: .5rem 1.2rem .5rem .6rem;
+        .buttonCol {
+            display: flex;
+            align-items: center;
+
+            .camera {
+                position: relative;
+                display: block;
+                width: 2.8rem;
+                height: 2.5rem;
+                margin-right: 1.6rem;
+                margin-bottom: .75rem;
+
+                input {
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    overflow: hidden;
+                }
+
+                span {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: url("/images/pages/chat/icon_camera.svg") no-repeat center / 100% auto;
+                    font-size: 0;
+                }
+            }
         }
 
-        .textinput {
-          outline: none;
-          -webkit-appearance: none;
-          appearance: none;
-          resize: none;
-          display: block;
-          width: 100%;
-          max-height: 5.4rem;
-          margin: 0;
-          padding: 0;
-          background: none;
-          border: none;
-          color: #000;
-          font-size: 1.5rem;
-          line-height: 1.8rem;
-          word-wrap: break-word;
+        .textCol {
+            flex: auto;
 
-          &::-webkit-scrollbar {
-            display: none;
-          }
+            .chatInput {
+                display: flex;
+                position: relative;
+                padding: .5rem;
+                align-items: flex-end;
+                overflow-y: auto;
+                background: #f8f8f8;
+                border: 1px solid #eee;
+                border-radius: 1rem;
+                box-sizing: border-box;
 
-          &::placeholder {
-            color: #999;
-          }
+                .textInputWrap {
+                    padding: .5rem 1.2rem .5rem .6rem;
+                }
+
+                .textinput {
+                    outline: none;
+                    -webkit-appearance: none;
+                    appearance: none;
+                    resize: none;
+                    display: block;
+                    width: 100%;
+                    max-height: 5.4rem;
+                    margin: 0;
+                    padding: 0;
+                    background: none;
+                    border: none;
+                    color: #000;
+                    font-size: 1.5rem;
+                    line-height: 1.8rem;
+                    word-wrap: break-word;
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+
+                    &::placeholder {
+                        color: #999;
+                    }
+                }
+
+                .submits {
+                    flex-shrink: 0;
+                    width: 2.8rem;
+                    margin-left: auto;
+
+                    button {
+                        width: 2.8rem;
+                        height: 2.8rem;
+                        background: url("/images/pages/chat/icon_sendBtn.png") no-repeat center / 100% auto;
+                        text-indent: -999rem;
+                    }
+                }
+            }
         }
-
-        .submits {
-          flex-shrink: 0;
-          width: 2.8rem;
-          margin-left: auto;
-
-          button {
-            width: 2.8rem;
-            height: 2.8rem;
-            background: url("/images/pages/chat/icon_sendBtn.png") no-repeat center / 100% auto;
-            text-indent: -999rem;
-          }
-        }
-      }
     }
-  }
 }
 
 @media screen and (max-width: 374px) {
-  .stream {
-    .messageWrapper {
-      .slideWrap {
-        width: 25.6rem;
-      }
-    }
+    .stream {
+        .messageWrapper {
+            .slideWrap {
+                width: 25.6rem;
+            }
+        }
 
-    .messageInner {
-      max-width: 22.6rem;
+        .messageInner {
+            max-width: 22.6rem;
 
-      .buttonWrap button {
-        min-width: 19.4rem;
-      }
-    }
+            .buttonWrap button {
+                min-width: 19.4rem;
+            }
+        }
 
-    .ticketReserve {
-      .infoWrap {
-        gap: .8rem;
-      }
+        .ticketReserve {
+            .infoWrap {
+                gap: .8rem;
+            }
+        }
     }
-  }
 }
 
 @media screen and (max-width: 359px) {
-  .stream {
-    .messageWrapper {
-      .slideWrap {
-        width: 23rem;
-      }
-    }
+    .stream {
+        .messageWrapper {
+            .slideWrap {
+                width: 23rem;
+            }
+        }
 
-    .messageInner {
-      max-width: 20rem;
+        .messageInner {
+            max-width: 20rem;
 
-      .buttonWrap button {
-        min-width: 16.6rem;
-      }
+            .buttonWrap button {
+                min-width: 16.6rem;
+            }
+        }
     }
-  }
 }

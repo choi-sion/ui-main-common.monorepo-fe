@@ -6,18 +6,12 @@ module.exports = {
     getAbsolutePath("@storybook/addon-links"),
     getAbsolutePath("@storybook/addon-essentials"),
     getAbsolutePath("@storybook/addon-interactions"),
-    getAbsolutePath("@storybook/addon-essentials"),
     {
-    name: '@storybook/addon-styling',
-    options: {
-      sass: {
-        // Require your Sass preprocessor here
-        implementation: require('sass')
-      }
+      name: '@storybook/addon-styling'
     }
-  }],
-  docs: {
-    autodocs: true
+  ],
+    docs: {
+      autodocs: true
   },
   framework: {
     name: getAbsolutePath("@storybook/react-vite"),

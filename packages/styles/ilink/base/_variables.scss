@@ -1,4 +1,4 @@
-$base: '/images' !default;
+$base: "/images" !default;
 
 $font-pretendard: "Pretendard", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 
@@ -9,26 +9,26 @@ $white: #fff;
 $black: #000;
 $defaultRed: #ef3e43;
 $subRed: #ff322e;
-$ticketPurple: #8E43E7;
+$ticketPurple: #8e43e7;
 $tourBlue: #1769ff;
 
 @mixin line-clamp($val: 1) {
-  display: -webkit-box;
-  overflow: hidden;
-  word-break: break-all;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: $val;
-  -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $val;
+    -webkit-box-orient: vertical;
 }
 
 @mixin btnCommon {
-  width: 100%;
-  padding: .9rem;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: .8rem;
-  box-sizing: border-box;
-  font-size: 1.3rem;
-  line-height: 1.6rem;
-  font-weight: bold;
+    width: 100%;
+    padding: .9rem;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: .8rem;
+    box-sizing: border-box;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    font-weight: bold;
 }

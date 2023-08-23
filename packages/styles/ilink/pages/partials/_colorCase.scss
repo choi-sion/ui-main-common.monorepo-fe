@@ -1,119 +1,119 @@
 &.ticket {
-  .noticeWrapper {
-    svg path {
-      fill: $ticketPurple;
+    .noticeWrapper {
+        svg path {
+            fill: $ticketPurple;
+        }
+
+        h3 {
+            color: $ticketPurple;
+        }
     }
 
-    h3 {
-      color: $ticketPurple;
+    .stream .buttonWrap.first {
+        button {
+            color: $ticketPurple;
+        }
     }
-  }
-
-  .stream .buttonWrap.first {
-    button {
-      color: $ticketPurple;
-    }
-  }
 }
 
 &.overseaAir {
-  .noticeWrapper {
-    svg path {
-      fill: #55ADFF;
-    }
+    .noticeWrapper {
+        svg path {
+            fill: #55adff;
+        }
 
-    h3 {
-      color: #55ADFF;
+        h3 {
+            color: #55adff;
+        }
     }
-  }
 }
 
 &.domesticAir {
-  .noticeWrapper {
-    svg path {
-      fill: #4DBEEE;
-    }
+    .noticeWrapper {
+        svg path {
+            fill: #4dbeee;
+        }
 
-    h3 {
-      color: #4DBEEE;
+        h3 {
+            color: #4dbeee;
+        }
     }
-  }
 }
 
 &.overseaHotel {
-  .noticeWrapper {
-    svg path {
-      fill: #67CA94;
-    }
+    .noticeWrapper {
+        svg path {
+            fill: #67ca94;
+        }
 
-    h3 {
-      color: #67CA94;
+        h3 {
+            color: #67ca94;
+        }
     }
-  }
 }
 
 &.domesticHotel {
-  .noticeWrapper {
-    svg path {
-      fill: #48D1B0;
-    }
+    .noticeWrapper {
+        svg path {
+            fill: #48d1b0;
+        }
 
-    h3 {
-      color: #48D1B0;
+        h3 {
+            color: #48d1b0;
+        }
     }
-  }
 }
 
 &.overseaPackage {
-  .noticeWrapper {
-    svg path {
-      fill: #FB7B5F;
-    }
+    .noticeWrapper {
+        svg path {
+            fill: #fb7b5f;
+        }
 
-    h3 {
-      color: #FB7B5F;
+        h3 {
+            color: #fb7b5f;
+        }
     }
-  }
 }
 
 &.domesticPackage {
-  .noticeWrapper {
-    svg path {
-      fill: #FB975F;
-    }
+    .noticeWrapper {
+        svg path {
+            fill: #fb975f;
+        }
 
-    h3 {
-      color: #FB975F;
+        h3 {
+            color: #fb975f;
+        }
     }
-  }
 }
 
 &.tourTicket {
-  .noticeWrapper {
-    svg path {
-      fill: #F9C474;
-    }
+    .noticeWrapper {
+        svg path {
+            fill: #f9c474;
+        }
 
-    h3 {
-      color: #F9C474;
+        h3 {
+            color: #f9c474;
+        }
     }
-  }
 }
 
 &.seoulArts {
-  .noticeWrapper {
-    svg path {
-      fill: #E6002D;
+    .noticeWrapper {
+        svg path {
+            fill: #e6002d;
+        }
+
+        h3 {
+            color: #e6002d;
+        }
     }
 
-    h3 {
-      color: #E6002D;
+    .stream .buttonWrap.first {
+        button {
+            color: #e6002d;
+        }
     }
-  }
-
-  .stream .buttonWrap.first {
-    button {
-      color: #E6002D;
-    }
-  }
 }
